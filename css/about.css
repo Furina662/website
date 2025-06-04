@@ -157,27 +157,27 @@ body {
    每个景点使用对应的实际风景照片
    体现Kaitiakitanga保护这些自然美景的理念 */
 .milford-sound {
-    background-image: url('../img/milford-sound.jpg'); /* 米尔福德峡湾：新西兰南岛峡湾地区的标志性景观 */
+    background-image: url('../img/about/Milford-Sound.jpg'); /* 米尔福德峡湾：新西兰南岛峡湾地区的标志性景观 */
 }
 
 .hobbiton {
-    background-image: url('../img/hobbiton.jpg');      /* 霍比特人电影村：展示新西兰绿色丘陵和可持续旅游业 */
+    background-image: url('../img/about/Hobbiton-Movie-Set.jpg');      /* 霍比特人电影村：展示新西兰绿色丘陵和可持续旅游业 */
 }
 
 .rotorua {
-    background-image: url('../img/rotorua.jpg');       /* 罗托鲁瓦：地热奇观和毛利文化中心 */
+    background-image: url('../img/about/Rotorua-Geothermal-Region.jpg');       /* 罗托鲁瓦：地热奇观和毛利文化中心 */
 }
 
 .mount-cook {
-    background-image: url('../img/mount-cook.jpg');    /* 库克山：新西兰最高峰，毛利文化中的神圣之山 */
+    background-image: url('../img/about/Mount-Cook.jpg');    /* 库克山：新西兰最高峰，毛利文化中的神圣之山 */
 }
 
-.waitomo {
-    background-image: url('../img/waitomo.jpg');       /* 怀托摩萤火虫洞：独特的地下生态系统 */
+.tongariro {
+    background-image: url('../img/about/Tongariro-National-Park.jpg');       /* 汤加里罗国家公园：新西兰第一个国家公园 */
 }
 
 .lake-tekapo {
-    background-image: url('../img/lake-tekapo.jpg');   /* 蒂卡普湖：高山湖泊生态系统和星空保护区 */
+    background-image: url('../img/about/lake-tekapo.jpg');   /* 蒂卡普湖：高山湖泊生态系统和星空保护区 */
 }
 
 /* 地点内容区域 - 卡片文字信息布局
