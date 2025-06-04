@@ -1,0 +1,193 @@
+/* ================================================
+   Take Action Page Styles - Kaitiakitanga Environmental Action
+   ================================================
+   
+   设计理念：
+   - 激励性的视觉设计鼓励环保行动
+   - 清晰的信息层次便于用户理解各种行动方式
+   - 互动式元素提升用户参与度
+   - 绿色环保主题色彩体现网站核心价值 */
+
+/* 主内容区域 - 为导航栏预留空间 */
+.main-content {
+    padding-top: 120px;               /* 顶部内边距：为固定导航栏预留足够空间 */
+}
+
+/* ================================================
+   页面头部区域 - 页面主要标题区域
+   ================================================ */
+
+.page-header {
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%); /* 绿色渐变背景：体现环保主题 */
+    color: white;
+    padding: 4rem 2rem;               /* 充足的内边距：确保内容有足够的呼吸空间 */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/index-bg.jpg') center/cover; /* 背景图片：与主页保持一致的视觉效果 */
+    opacity: 0.2;                     /* 透明度0.2：确保文字清晰可读 */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-header h1 {
+    font-size: 3rem;                  /* 大号字体：突出页面主题 */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字阴影：确保在背景上的可读性 */
+}
+
+/* ================================================
+   行动分类区域 - 展示不同类型的环保行动
+   ================================================ */
+
+.action-categories {
+    padding: 4rem 2rem;
+    background: #f8f9fa;              /* 浅灰背景：为内容提供清洁的视觉环境 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.action-categories h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c5530;                   /* 深绿色：与主题保持一致 */
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 响应式网格：自适应列数 */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.action-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 柔和阴影：创建卡片立体效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡动画 */
+    text-align: center;
+    border: 3px solid transparent;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);      /* 悬停上浮效果：增强交互反馈 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: #4a7c59;            /* 悬停边框：突出选中状态 */
+}
+
+.action-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.action-card h3 {
+    font-size: 1.5rem;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.action-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.action-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;    /* 分隔线：清晰区分各个行动项 */
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.action-list li::before {
+    content: '✓';
+    color: #4a7c59;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
+.action-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #4a7c59, #2c5530); /* 渐变按钮：视觉吸引力 */
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.action-button:hover {
+    background: linear-gradient(45deg, #2c5530, #1e3a23);
+    transform: scale(1.05);           /* 轻微放大：突出悬停状态 */
+    box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
+}
+
+/* ================================================
+   响应式设计 - 移动设备适配
+   ================================================ */
+
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 100px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .action-categories h2 {
+        font-size: 2rem;
+    }
+    
+    .action-categories {
+        padding: 2rem 1rem;
+    }
+    
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 2rem 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .action-card {
+        padding: 1.5rem;
+    }
+}
