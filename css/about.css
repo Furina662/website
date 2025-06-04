@@ -1,0 +1,295 @@
+/* ================================================
+   Kaitiakitanga环保网站 - About页面样式表
+   ================================================
+   
+   设计理念：展示新西兰自然景观和环保理念
+   技术特点：响应式设计，CSS Grid布局，背景融合效果
+   
+   主要功能：
+   1. 景点介绍页面布局
+   2. 地点卡片网格系统
+   3. 响应式图片展示
+   ================================================ */
+
+/* 页面主体布局 - Flexbox布局系统
+   功能说明：
+   - 创建全屏高度的flex容器
+   - 背景图片叠加效果体现新西兰自然美景
+   - 半透明蒙版确保文字可读性
+   
+   设计考量：
+   - 固定背景图片创建沉浸式体验
+   - rgba叠加提供适当的对比度
+   - min-height: 100vh确保全屏布局 */
+body {
+    display: flex;                    /* Flexbox布局：创建垂直方向的页面结构 */
+    flex-direction: column;           /* 垂直方向：头部、主内容、页脚的标准布局 */
+    min-height: 100vh;                /* 最小高度100vh：确保页面至少占满整个视窗 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 现代化字体栈：确保跨平台兼容性 */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* 半透明黑色蒙版：提升文字可读性 */
+                url('../img/index-bg.jpg') center/cover no-repeat fixed; /* 背景图片：新西兰自然风光，固定定位创建沉浸感 */
+}
+
+/* 主内容区域 - 页面核心内容容器
+   布局策略：flex: 1确保主内容占用页脚之外的所有空间
+   导航适配：padding-top为固定导航栏留出空间 */
+.main-content {
+    flex: 1;                          /* 弹性增长：占用除导航和页脚外的所有可用空间 */
+    padding-top: 120px;               /* 顶部内边距120px：为固定定位的导航栏预留空间 */
+}
+
+/* 景点介绍区域 - 页面头部展示区
+   设计特色：
+   - 半透明背景创建层次感和深度
+   - backdrop-filter模糊效果增强视觉吸引力
+   - 圆角设计体现现代化UI风格
+   
+   用户体验优化：
+   - 居中对齐确保内容的视觉平衡
+   - 充足的内边距提供舒适的阅读空间
+   - 最大宽度限制确保大屏幕下的可读性 */
+.attractions-introduction {
+    padding: 4rem 2rem;               /* 内边距：垂直4rem提供充足空间，水平2rem确保内容不贴边 */
+    text-align: center;               /* 文本居中：创建对称和平衡的视觉效果 */
+    background: rgba(0, 0, 0, 0.3);   /* 半透明黑色背景：在背景图上创建文字可读区域 */
+    backdrop-filter: blur(8px);       /* 背景模糊8px：现代化的毛玻璃效果，增强视觉层次 */
+    margin: 2rem auto;                /* 外边距：垂直2rem分隔内容，auto水平居中 */
+    max-width: 1200px;                /* 最大宽度1200px：确保大屏幕下的最佳阅读体验 */
+    border-radius: 15px;              /* 圆角15px：柔化边缘，体现现代设计美学 */
+}
+
+/* 页面主标题样式 - 突出显示页面主题
+   Excellence标准技术：
+   - 大字体层次建立清晰的信息架构
+   - 文字阴影增强可读性和视觉效果
+   - 响应式字体大小适配不同设备 */
+.page-header-container h1 {
+    font-size: 4rem;                  /* 大字体4rem：突出显示页面主题，建立视觉层次 */
+    color: white;                     /* 白色文字：在深色背景上提供最佳对比度 */
+    margin-bottom: 1.5rem;            /* 底部外边距1.5rem：为描述文字留出适当空间 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 文字阴影：增强在背景图上的可读性 */
+}
+
+/* 介绍文本样式 - 页面描述和理念传达
+   可访问性考量：
+   - 适中的字体大小确保可读性
+   - 高行高提升阅读舒适度
+   - 最大宽度控制行长度，避免阅读疲劳 */
+.introduction-text {
+    font-size: 1.3rem;                /* 字体大小1.3rem：略大于标准文本，体现描述内容的重要性 */
+    color: #e8f5e8;                   /* 浅绿色：与网站主题色保持一致，提供足够对比度 */
+    line-height: 1.6;                 /* 行高1.6：提供舒适的文本阅读体验 */
+    max-width: 800px;                 /* 最大宽度800px：控制行长度，提升阅读舒适度 */
+    margin: 0 auto;                   /* 居中对齐：在容器中创建对称布局 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文字阴影：确保在各种背景下的可读性 */
+}
+
+/* 地点展示区域 - 新西兰景点网格布局系统
+   Excellence标准技术展示：
+   - CSS Grid布局创建响应式卡片网格
+   - 自适应列数确保各种屏幕的最佳显示
+   - 充足的间距提供良好的视觉分隔
+   
+   设计策略：
+   - 最大宽度限制确保大屏幕下的布局合理性
+   - 居中对齐创建平衡的页面布局
+   - 垂直内边距为内容提供呼吸空间 */
+.locations {
+    padding: 4rem 2rem;               /* 内边距：垂直4rem提供充足的区域分隔，水平2rem确保边距 */
+    max-width: 1400px;                /* 最大宽度1400px：适应网格布局的更宽容器需求 */
+    margin: 0 auto;                   /* 居中对齐：在页面中创建对称的布局效果 */
+}
+
+/* 地点网格布局 - CSS Grid响应式系统
+   Excellence技术应用：
+   - repeat(auto-fit, minmax())创建自适应网格
+   - 400px最小列宽确保卡片内容的可读性
+   - 2rem间距提供清晰的卡片分隔 */
+.location-grid {
+    display: grid;                    /* CSS Grid布局：现代化的二维布局系统 */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 自适应列数：最小400px宽度，自动调整列数 */
+    gap: 2rem;                        /* 网格间距2rem：为卡片之间提供清晰的视觉分隔 */
+    margin-top: 2rem;                 /* 顶部外边距2rem：与上方内容保持适当距离 */
+}
+
+/* 地点卡片设计 - 现代化卡片UI组件
+   设计特色：
+   - 半透明白色背景确保内容可读性
+   - 圆角和阴影创建现代卡片美学
+   - 悬停动画提供良好的交互反馈
+   
+   用户体验优化：
+   - overflow: hidden确保圆角效果完整性
+   - transition动画提供平滑的交互体验
+   - 阴影变化增强悬停状态的视觉反馈 */
+.location-card {
+    background: rgba(255, 255, 255, 0.95); /* 半透明白色背景：在背景图上创建清晰的内容区域 */
+    border-radius: 15px;              /* 圆角15px：现代卡片设计，柔化视觉边缘 */
+    overflow: hidden;                 /* 隐藏溢出：确保图片和内容不超出圆角边界 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* 阴影效果：创建卡片浮起的立体感 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡动画：为悬停效果提供平滑变换 */
+}
+
+/* 卡片悬停效果 - 增强交互体验的动画反馈 */
+.location-card:hover {
+    transform: translateY(-5px);      /* 向上移动5px：创建卡片浮起的视觉效果 */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4); /* 增强阴影：强化悬停状态的立体感 */
+}
+
+/* 地点图片容器 - 响应式背景图片系统
+   技术实现：
+   - 固定高度确保卡片布局的一致性
+   - background-size: cover保持图片比例
+   - center定位展示图片最重要部分
+   
+   视觉设计：
+   - 250px高度提供适当的图片展示区域
+   - 不重复背景避免图片变形
+   - 各景点使用独特的背景图片 */
+.location-image {
+    height: 250px;                    /* 固定高度250px：确保所有卡片图片区域统一 */
+    background-size: cover;           /* 覆盖模式：保持图片比例，填满容器 */
+    background-position: center;      /* 居中定位：展示图片的核心内容 */
+    background-repeat: no-repeat;     /* 不重复：避免图片平铺造成的视觉干扰 */
+}
+
+/* 各地点专属背景图片 - 展示新西兰标志性景观
+   每个景点使用对应的实际风景照片
+   体现Kaitiakitanga保护这些自然美景的理念 */
+.milford-sound {
+    background-image: url('../img/milford-sound.jpg'); /* 米尔福德峡湾：新西兰南岛峡湾地区的标志性景观 */
+}
+
+.hobbiton {
+    background-image: url('../img/hobbiton.jpg');      /* 霍比特人电影村：展示新西兰绿色丘陵和可持续旅游业 */
+}
+
+.rotorua {
+    background-image: url('../img/rotorua.jpg');       /* 罗托鲁瓦：地热奇观和毛利文化中心 */
+}
+
+.mount-cook {
+    background-image: url('../img/mount-cook.jpg');    /* 库克山：新西兰最高峰，毛利文化中的神圣之山 */
+}
+
+.waitomo {
+    background-image: url('../img/waitomo.jpg');       /* 怀托摩萤火虫洞：独特的地下生态系统 */
+}
+
+.lake-tekapo {
+    background-image: url('../img/lake-tekapo.jpg');   /* 蒂卡普湖：高山湖泊生态系统和星空保护区 */
+}
+
+/* 地点内容区域 - 卡片文字信息布局
+   内容层次设计：
+   - 充足的内边距确保文字不贴边
+   - 清晰的标题层次体现信息重要性
+   - 颜色搭配体现环保主题 */
+.location-content {
+    padding: 1.5rem;                  /* 内边距1.5rem：为文字内容提供舒适的阅读空间 */
+}
+
+/* 地点名称标题 - 突出显示景点名称
+   设计考量：
+   - 深绿色呼应环保主题和新西兰自然色彩
+   - 适中的字体大小建立清晰的信息层次
+   - 底部边距为副标题留出空间 */
+.location-content h3 {
+    font-size: 1.5rem;                /* 字体大小1.5rem：确保景点名称的突出显示 */
+    color: #2c5530;                   /* 深绿色：体现环保主题，与网站主色调保持一致 */
+    margin-bottom: 0.5rem;            /* 底部外边距0.5rem：为地区信息留出适当间距 */
+}
+
+/* 地区标识标签 - 地理位置信息展示
+   视觉特色：
+   - 灰色表示次要信息地位
+   - 大写字母和字母间距增强正式感
+   - 小字体体现标签性质 */
+.location-region {
+    font-size: 0.9rem;                /* 小字体0.9rem：体现地区标签的次要地位 */
+    color: #666;                      /* 中性灰色：提供信息但不干扰主要内容 */
+    font-weight: 600;                 /* 字重600：中等加粗确保可读性 */
+    margin-bottom: 1rem;              /* 底部外边距1rem：为描述文字留出空间 */
+    text-transform: uppercase;        /* 大写转换：增强标签的正式感和识别性 */
+    letter-spacing: 0.5px;            /* 字母间距0.5px：提升大写文字的可读性 */
+}
+
+/* 地点描述文字 - 详细信息展示
+   可读性优化：
+   - 深灰色确保良好的文字对比度
+   - 适当的行高提升阅读舒适度
+   - 标准字体大小确保内容易读 */
+.location-description {
+    font-size: 1rem;                  /* 标准字体大小1rem：确保描述内容的良好可读性 */
+    color: #444;                      /* 深灰色：提供足够对比度的文字颜色 */
+    line-height: 1.6;                 /* 行高1.6：提升多行文字的阅读舒适度 */
+}
+
+/* ================================================
+   响应式设计 - 多设备适配系统
+   ================================================
+   
+   Excellence标准技术：
+   - 移动优先的响应式设计策略
+   - 多断点适配确保最佳用户体验
+   - 渐进式内容调整和布局优化 */
+
+/* 平板设备适配 (屏幕宽度768px以下)
+   布局调整策略：
+   - 减少导航栏预留空间
+   - 优化边距和间距以适应中等屏幕
+   - 调整字体大小保持可读性 */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 100px;           /* 减少顶部内边距：适应移动端导航栏高度 */
+    }
+    
+    .attractions-introduction {
+        margin: 1rem;                 /* 减少外边距：适应平板屏幕边界 */
+        padding: 2rem 1rem;           /* 调整内边距：保持内容可读性的同时节省空间 */
+    }
+    
+    .page-header-container h1 {
+        font-size: 2.5rem;            /* 缩小主标题：适应平板屏幕，保持视觉层次 */
+    }
+    
+    .introduction-text {
+        font-size: 1.1rem;            /* 调整介绍文字：在小屏幕上保持可读性 */
+    }
+    
+    .locations {
+        padding: 2rem 1rem;           /* 减少locations区域内边距：优化平板布局 */
+    }
+    
+    .location-grid {
+        grid-template-columns: 1fr;   /* 单列布局：在平板设备上堆叠卡片，提高可读性 */
+        gap: 1.5rem;                  /* 减少网格间距：适应屏幕空间限制 */
+    }
+    
+    .location-image {
+        height: 200px;                /* 减少图片高度：适应平板屏幕比例 */
+    }
+}
+
+/* 手机设备适配 (屏幕宽度480px以下)
+   极致优化策略：
+   - 最小化字体大小保持可读性
+   - 减少内边距最大化内容空间
+   - 紧凑布局适应小屏幕限制 */
+@media (max-width: 480px) {
+    .page-header-container h1 {
+        font-size: 2rem;              /* 主标题2rem：手机端的最佳标题大小 */
+    }
+    
+    .introduction-text {
+        font-size: 1rem;              /* 介绍文字1rem：标准移动端文字大小 */
+    }
+    
+    .location-content {
+        padding: 1rem;                /* 减少卡片内边距：在小屏幕上最大化内容空间 */
+    }
+    
+    .location-content h3 {
+        font-size: 1.3rem;            /* 地点标题1.3rem：保持层次的同时适应小屏幕 */
+    }
+}
