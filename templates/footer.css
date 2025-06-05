@@ -1,8 +1,9 @@
-/* Footer Styles - Clean Static Design */
+/* Footer Styles */
 
-/* Main footer container 
-   Uses green gradient background mimicking New Zealand natural environment colors
-   margin-top: auto ensures footer sticks to bottom of page */
+/*  
+Uses green background to match website theme
+margin-top: auto make sure footer sticks to bottom of page 
+*/
 .footer {
     background: linear-gradient(135deg, #2c5530, #1a3d1f);
     color: #ffffff;
@@ -11,9 +12,9 @@
     border-top: 3px solid #a8d5a8;
 }
 
-/* Footer content area - Grid layout
-   Uses CSS Grid to create two-column layout: brand info + quick navigation
-   2fr 1fr means left section takes 2/3 width, right section takes 1/3 width */
+/* Footer content area
+   Uses CSS Grid to create two-column layout
+*/
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,8 +26,9 @@
     margin-bottom: 40px;
 }
 
-/* Main heading style - e.g. "Kaitiakitanga Environmental Awareness"
-   Large font to highlight brand name */
+/* Main heading style
+   Large font to emphasize website theme
+*/
 .footer-section h3 {
     color: #ffffff;
     font-size: 2.2rem;
@@ -35,7 +37,7 @@
     position: relative;
 }
 
-/* Main heading underline decoration - Green line for visual enhancement */
+/* Main heading underline decoration */
 .footer-section h3::after {
     content: '';
     position: absolute;
@@ -47,8 +49,7 @@
     border-radius: 2px;
 }
 
-/* Subheading style - e.g. "Quick Links"
-   Uses light green color and uppercase transform for modern feel */
+/* quick links style */
 .footer-section h4 {
     color: #a8d5a8;
     font-size: 1.3rem;
@@ -58,8 +59,7 @@
     letter-spacing: 0.5px;
 }
 
-/* Paragraph text style - Brand description text
-   Uses lighter color to ensure readability */
+/* Paragraph text style */
 .footer-section p {
     color: #e8f5e8;
     line-height: 1.7;
@@ -67,20 +67,12 @@
     max-width: 400px;
 }
 
-/* Navigation list container - Remove default list styling */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Navigation list items - Set appropriate spacing */
+/* Set spacing */
 .footer-section ul li {
     margin-bottom: 10px;
 }
 
-/* Navigation link style - Page navigation links
-   Set as inline-block for easy padding addition */
+/* Nav link style */
 .footer-section ul li a {
     color: #e8f5e8;
     text-decoration: none;
@@ -90,12 +82,12 @@
     transition: color 0.3s ease;
 }
 
-/* Navigation link hover effect - Changes to green on hover */
+/* Nav link hover effect:changes to  light green on hover */
 .footer-section ul li a:hover {
     color: #a8d5a8;
 }
 
-/* Footer bottom area - Copyright information section
+/* Footer bottom area：describe the image source
    Uses semi-transparent background to separate from main content */
 .footer-bottom {
     background: rgba(0, 0, 0, 0.3);
@@ -104,14 +96,14 @@
     text-align: center;
 }
 
-/* Bottom text style - Copyright information text */
+/* Bottom text style */
 .footer-bottom p {
     margin: 0;
     font-size: 0.9rem;
     color: #c8e6c8;
 }
 
-/* Bottom link style - Brand link highlight */
+/* Bottom link style：Highlight the website name */
 .footer-bottom a {
     color: #a8d5a8;
     text-decoration: none;
@@ -119,12 +111,12 @@
     transition: color 0.3s ease;
 }
 
-/* Bottom link hover effect - Changes to white on hover */
+/* Bottom link hover effect:changes to white on hover */
 .footer-bottom a:hover {
     color: #ffffff;
 }
 
-/* Tablet device adaptation (below 768px) 
+/* mobile device adaptation
    Switch to single column layout with centered content alignment */
 @media (max-width: 768px) {
     .footer {
@@ -143,7 +135,7 @@
         font-size: 1.8rem;
     }
     
-    /* Center align underline decoration */
+    /* Center align underline */
     .footer-section h3::after {
         left: 50%;
         transform: translateX(-50%);
