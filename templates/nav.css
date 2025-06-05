@@ -1,10 +1,10 @@
 
 /* 
-Kaitiakitanga Environmental Website - Navigation Style Sheet
+Kaitiakitanga Environmental Website - Navbar Style Sheet
 
 design concept:
 A green color scheme that reflects New Zealand's environmental theme
-Responsive design ensures cross-device user experience
+Responsive design make sure the navbar adapts in different screen sizes
 Breakpoint selection: 768px based on common tablet/mobile phone boundary settings
 CSS media queries to achieve breakpoint response
    
@@ -14,10 +14,10 @@ CSS media query to achieve mobile adaptation
 CSS pseudo-elements to create a hamburger menu toggle effect
 */
 
-/* ==========================Desktop navbar style===============================*/
+/* ==========================pc navbar style===============================*/
 
 /* 
-used sticky positioning make sure keep navigation bar when scrolling
+used sticky positioning make sure keep navbar when scrolling
 used z-index so that navigation bar is always on top of other content
 used green colour to match website theme
 */
@@ -33,7 +33,7 @@ nav {
 the maximum width is 100% so that the screen is fully covered
 main axis alignment with Flexbox
 Provide appropriate margins for content to avoid sticking to the edges
-Make sure the navigation content is displayed in the center of the navbar
+Make sure the nav content is displayed in the center of the navbar
 */
 .nav-container {
     max-width: 100%;    
@@ -67,10 +67,10 @@ used flexbox horizontal layout make sure that menu items are neatly arranged in 
 }
 
 /* 
-Navigation menu links - main nav style
+Navigation menu links
 White text on dark green background make sure  optimal visibility
 25px font size provides excellent readability
-0.3s transition provides smooth interactive feedback
+0.3s transition provides smooth feedback
 */
 .nav-menu a {
     color: white;                    
@@ -82,8 +82,8 @@ White text on dark green background make sure  optimal visibility
 }
 
 /* 
-Navigation hover effects
-Medium green background highlights current selection
+Nav hover effects
+green background highlights current selection
 Light green text maintains brand color consistency
 */
 .nav-menu a:hover {
@@ -92,8 +92,8 @@ Light green text maintains brand color consistency
 }
 
 /*
-Mobile hamburger menu toggle - Interactive navigation control
-Hidden by default on desktop, activated only on mobile screens
+Mobile hamburger menu toggle
+Hidden by default on pc, activated only on mobile screens
 CSS pseudo-elements create animated toggle between hamburger and close icons
 JavaScript controls menu expansion/collapse functionality
 */
@@ -107,7 +107,7 @@ JavaScript controls menu expansion/collapse functionality
     transition: all 0.2s ease;    
 }
 
-/* Hamburger menu hover state - Interactive feedback for user engagement */
+/* Hamburger menu hover state */
 .menu-toggle:hover {
     background-color: #4a7c28;      
 }
@@ -135,13 +135,12 @@ JavaScript controls menu expansion/collapse functionality
 /* ===============================Mobile navbar style============================*/
 
 /* 
-Mobile responsive design - Optimized layout for screens ≤768px
+responsive design - specially optimized for screens ≤768px
 Breakpoint: 768px chosen based on common tablet/mobile device boundaries
 JavaScript controlled menu system
 */
 
 @media (max-width: 768px) {
-    /* Mobile nav container adjustments */
     .nav-container {
         padding: 0 0.5rem;           
         position: relative;          
@@ -161,7 +160,7 @@ JavaScript controlled menu system
         margin-left: auto;            
     }
     
-    /* Mobile dropdown menu*/
+
     .nav-menu {
         display: none;                
         position: absolute;              
@@ -181,7 +180,7 @@ JavaScript controlled menu system
         display: flex;                  
     }
     
-    /* Mobile menu items */
+
     .nav-menu a {
         padding: 0.8rem 1.5rem;         
         border-radius: 0;              
@@ -194,7 +193,7 @@ JavaScript controlled menu system
         border-bottom: none;      
     }
     
-    /* Mobile menu hover effects - Touch interaction feedback */
+    /* Mobile menu hover effects provide good user feedback */
     .nav-menu a:hover {
         background-color: #4a7c28;    
     }
