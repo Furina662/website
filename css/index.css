@@ -1,12 +1,14 @@
 
 /* 
-    Kaitiakitanga Website - Home Page Styles
+   Home Page Styles
 
-   Key Features:
+   Purpose: Introducing Kaitiakitanga
+   Features: Responsive design, Blurred Background
+
+   Main Features:
    The background is a real picture of New Zealand, which is in line with the theme of the website.
    Fully responsive design for all devices
 */
-
 
 /* Page body layout */
 body {
@@ -22,15 +24,16 @@ body {
 /* Main content area
    Uses flexbox for horizontal and vertical centering 
 */
+       
 .main-content {
-    flex: 1;                         
-    position: relative;              
-    display: flex;                   
-    align-items: center;              
-    justify-content: center;          
+    flex: 1;
+    position: relative;
+    min-height: calc(100vh - 120px); /* Subtract nav height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 60px; 
-}          
-
+}
 /* Main container
    With background blur effect, increase the three-dimensional sense
 */
