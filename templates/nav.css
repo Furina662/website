@@ -1,134 +1,201 @@
 
-/* ================================style of navbar of pc===============================*/
+/* 
+Kaitiakitanga Environmental Website - Navigation Style Sheet
 
+design concept:
+A green color scheme that reflects New Zealand's environmental theme
+Responsive design ensures cross-device user experience
+Breakpoint selection: 768px based on common tablet/mobile phone boundary settings
+CSS media queries to achieve breakpoint response
+   
+used technology:
+CSS Flexbox layout achieves adaptiveness
+CSS media query to achieve mobile adaptation
+CSS pseudo-elements to create a hamburger menu toggle effect
+*/
+
+/* ==========================Desktop navbar style===============================*/
+
+/* 
+used sticky positioning make sure keep navigation bar when scrolling
+used z-index so that navigation bar is always on top of other content
+used green colour to match website theme
+*/
 nav {
-    background-color: #2d5016;        /* set green bg of navbar*/
-    padding: 1rem 0;                    /* top and bottom padding */
-    position: sticky;                   /* stick in top when  user scrolling the page */
-    top: 0;                             /* position at top */
-    z-index: 1000;                      /* set as topmost */
+    background-color: #2d5016;       
+    padding: 1rem 0;                
+    position: sticky;                 
+    top: 0;                        
+    z-index: 1000;  
 }
 
+/* 
+the maximum width is 100% so that the screen is fully covered
+main axis alignment with Flexbox
+Provide appropriate margins for content to avoid sticking to the edges
+Make sure the navigation content is displayed in the center of the navbar
+*/
 .nav-container {
-    max-width: 100%;                    /* full screen width */
-    margin: 0 auto;                     /* center horizontally */
-    padding: 0 50px;                    /* left and right padding */
-    display: flex;                      /* flexible layout */
-    justify-content: space-between;     /* space between logo and menu */
-    align-items: center;                /* center vertically */
-    user-select: none;                  /* not allow user sclect word */
+    max-width: 100%;    
+    margin: 0 auto;           
+    padding: 0 50px;           
+    display: flex;                   
+    justify-content: space-between; 
+    align-items: center;              
 }
 
+/* 
+Kaitiakitanga website identity
+Light green text creates contrast with dark green background
+Bold font weight reinforces brand environmental theme
+Zero margin make sure precise layout control within flexbox container
+*/
 .nav-logo h1 {
-    font-size: 35px;                    /* font size */
-    font-weight: bold;                  /* bold text */
-    color: #a8d5a8;                   /* light green colour of text */
-    margin: 0;                          /* remove margin */
+    font-size: 35px;                 
+    font-weight: bold;             
+    color: #a8d5a8;               
+    margin: 0;                   
 }
+
+/* 
+used flexbox horizontal layout make sure that menu items are neatly arranged in one row
+30px spacing: creates proper separation between menu items
+*/
 .nav-menu {
-    display: flex;                      /* horizontal layout */
-    gap: 30px;                          /* space between menu items */
+    display: flex;                  
+    gap: 30px;            
 }
 
+/* 
+Navigation menu links - main nav style
+White text on dark green background make sure  optimal visibility
+25px font size provides excellent readability
+0.3s transition provides smooth interactive feedback
+*/
 .nav-menu a {
-    color: white;                     /* set colour of menu is white */
-    font-size: 25px;                    /* set font size */
-    padding: 0.5rem 1rem;               /* add padding around text */
-    border-radius: 5px;                 /* rounded corners */
-    transition: all 0.3s ease;          /* transition */
-    display: block;                     /* block display */
+    color: white;                    
+    font-size: 25px;                
+    padding: 0.5rem 1rem;          
+    border-radius: 5px;           
+    transition: all 0.3s ease;    
+    display: block;                 
 }
 
+/* 
+Navigation hover effects
+Medium green background highlights current selection
+Light green text maintains brand color consistency
+*/
 .nav-menu a:hover {
-    background-color: #4a7c28;        /* green bg when user selected */
-    color: #a8d5a8;                   /* light green colour of text when user selected */
+    background-color: #4a7c28;       
+    color: #a8d5a8;                 
 }
 
+/*
+Mobile hamburger menu toggle - Interactive navigation control
+Hidden by default on desktop, activated only on mobile screens
+CSS pseudo-elements create animated toggle between hamburger and close icons
+JavaScript controls menu expansion/collapse functionality
+*/
 .menu-toggle {
-    display: none;                      /* hidden by default */
-    font-size: 35px;                    /* size of hamburger icon */
-    cursor: pointer;                    /* pointer cursor when selected */
-    padding: 0.5rem;                    /* padding around icon */
-    border-radius: 5px;                 /* rounded corners */
-    color: white;                     /* white color of icon */
-    transition: all 0.3s ease;          /* transitions */
+    display: none;                
+    font-size: 35px;               
+    cursor: pointer;               
+    padding: 0.5rem;                 
+    border-radius: 5px;        
+    color: white;            
+    transition: all 0.2s ease;    
 }
 
+/* Hamburger menu hover state - Interactive feedback for user engagement */
 .menu-toggle:hover {
-    background-color: #4a7c28;        /* green bg when user selceted */
+    background-color: #4a7c28;      
 }
 
+/* Active menu state provide good user feedback  */
 .menu-toggle.active {
-    background-color: #4a7c28;        /* green bg when active */
-    position: relative;                 /* positioning for × symbol */
-    color: transparent;                 /* remove ☰ symbol */
+    background-color: #4a7c28;       
+    position: relative;             
+    color: transparent;              
 }
 
+/* CSS pseudo-element creates close symbol when menu is active */
 .menu-toggle.active::before {    
-    content: "×";                       /* × symbol */
-    font-size: 40px;                    /* size of × symbol */
-    position: absolute;                 /* absolute positioning */
-    top: 50%;                           /* center vertically */
-    left: 50%;                          /* center horizontally */
-    transform: translate(-50%, -50%);   /* perfect centering */
-    color: white;                     /* white colour of symbol */
+    content: "×";                    
+    font-size: 40px;               
+    position: absolute;          
+    top: 50%;                      
+    left: 50%;                   
+    transform: translate(-50%, -50%); 
+    color: white;                    
 }
 
 
 
-/* ================================style of navbar of mobile============================*/
+/* ===============================Mobile navbar style============================*/
 
+/* 
+Mobile responsive design - Optimized layout for screens ≤768px
+Breakpoint: 768px chosen based on common tablet/mobile device boundaries
+JavaScript controlled menu system
+*/
 
 @media (max-width: 768px) {
+    /* Mobile nav container adjustments */
     .nav-container {
-        padding: 0 0.5rem;              /* padding when mobile */
-        position: relative;             /* used for dropdown menu positioning */
+        padding: 0 0.5rem;           
+        position: relative;          
     }
     
     .nav-logo {
-        flex: 1;                        /* take remaining space */
-        text-align: left;               /* align left */
+        flex: 1;                     
+        text-align: left;               
     }
     
     .nav-logo h1 {
-        font-size: 1.5rem;              /* font of logo in mobile */
+        font-size: 1.5rem;              
     }
+    
     .menu-toggle {
-        display: block;                 /* show on mobile */
-        margin-left: auto;              /* let icon in right of navbar */
-    }    /* mobile dropdown menu */
+        display: block;                
+        margin-left: auto;            
+    }
+    
+    /* Mobile dropdown menu*/
     .nav-menu {
-        display: none;                   /* hidden by default */
-        position: absolute;              /* position below navbar */
-        top: 100%;                       /* below nav container */
-        left: 0;                         /* full width left */
-        right: 0;                        /* full width right */
-        flex-direction: column;          /* vertical menu items */
-        gap: 0;                          /* no gap between items */
-        background-color: #2d5016;     /* same green bg as pc */
-        border-radius: 5px;              /* rounded corners */
-        overflow: hidden;                /* hide overflow */
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* drop shadow */
-        z-index: 1000;                   /* set as topmost */
+        display: none;                
+        position: absolute;              
+        top: 100%;                    
+        left: 0;                        
+        right: 0;                      
+        flex-direction: column;        
+        gap: 0;                       
+        background-color: #2d5016;    
+        border-radius: 5px;             
+        overflow: hidden;                
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;                 
     }
     
-    /* show menu when active */
     .nav-menu.active {
-        display: flex;                   /* show menu when active */
-    }    
+        display: flex;                  
+    }
+    
+    /* Mobile menu items */
     .nav-menu a {
-        padding: 0.8rem 1.5rem;          /* reduce vertical padding for tighter spacing */
-        border-radius: 0;                /* no rounded corners */
-        text-align: center;              /* set text in center of navbar*/
-        border-bottom: 1px solid #4a7c28; /* add separator line */
+        padding: 0.8rem 1.5rem;         
+        border-radius: 0;              
+        text-align: center;              
+        border-bottom: 1px solid #4a7c28; 
     }
     
-
+    /* Remove border from last menu item */
     .nav-menu li:last-child a {
-        border-bottom: none;             /* remove border from last menu item */
+        border-bottom: none;      
     }
     
+    /* Mobile menu hover effects - Touch interaction feedback */
     .nav-menu a:hover {
-        background-color: #4a7c28;     /* green bg when user selected */
+        background-color: #4a7c28;    
     }
 }
