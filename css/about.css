@@ -2,14 +2,11 @@
    About Page Styles
    
    Purpose: Showcase New Zealand natural landscapes
-   Features: Responsive design, CSS Grid layout, background blend effects
+   Features: Responsive design, CSS Grid layout
    
-   Main Functions:
-   Location card grid system
-   Responsive image display
+   Responsive card grid display
 */
 
-/* Page body layout */
 body {
     display: flex;                 
     flex-direction: column;          
@@ -25,7 +22,7 @@ body {
     padding-top: 120px; 
 }
 
-/* Attractions introduction area */
+/* main a ttractions introduction  areaa*/
 .attractions-introduction {
     padding: 4rem 2rem;               
     text-align: center;               
@@ -36,7 +33,7 @@ body {
     border-radius: 15px;              
 }
 
-/* Prominent page theme display */
+
 .page-header-container h1 {
     font-size: 4rem;                
     color: white;                    
@@ -44,7 +41,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Introduction text style */
+
 .introduction-text {
     font-size: 1.3rem;                
     color: #e8f5e8;                 
@@ -53,14 +50,14 @@ body {
     margin: 0 auto;                 
 }
 
-/* Locations display area:New Zealand attractions grid layout*/
+
 .locations {
     padding: 4rem 2rem;              
     max-width: 1400px;                
     margin: 0 auto;                  
 }
 
-/* Location grid layout:CSS Grid responsive */
+/* Location grid layout */
 .location-grid {
     display: grid;                   
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
@@ -68,7 +65,7 @@ body {
     margin-top: 2rem;               
 }
 
-/* Location card  */
+
 .location-card {
     background: rgba(255, 255, 255, 0.95); 
     border-radius: 15px;             
@@ -77,18 +74,18 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition animation: provide smooth interactive response */
 }
 
-/* Card hover effect */
+
 .location-card:hover {
     transform: translateY(-20px);      /* Move up 20px */
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 1.2); /* Enhanced shadow:Simulating Physical Effects */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 1.2); /* shadow Simulating Physical Effects */
 }
 
-/* Responsive background image*/
+/* image of card */
 .location-image {
     height: 250px;                   
     background-size: cover;          
     background-position: center;      
-    background-repeat: no-repeat;     /* No repeat: Avoid multiple identical images appearing at the same time */
+    background-repeat: no-repeat;  /*  Avoid multiple identical images appearing at the same time */
 }
 
 /* location background images */
@@ -128,7 +125,7 @@ body {
     margin-bottom: 0.5rem;            
 }
 
-/* Geographic location information display */
+/* Geographic location information */
 .location-region {
     font-size: 0.9rem;               
     color: #666;                    
@@ -138,7 +135,7 @@ body {
     letter-spacing: 0.5px; 
 }
 
-/* Location description text */
+/* description text */
 .location-description {
     font-size: 1rem;                
     color: #444;                   
