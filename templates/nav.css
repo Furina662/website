@@ -1,17 +1,6 @@
 
 /* 
 Kaitiakitanga Environmental Website - Navbar Style Sheet
-
-design concept:
-A green color scheme that reflects New Zealand's environmental theme
-Responsive design make sure the navbar adapts in different screen sizes
-Breakpoint selection: 768px based on common tablet/mobile phone boundary settings
-CSS media queries to achieve breakpoint response
-   
-used technology:
-CSS Flexbox layout achieves adaptiveness
-CSS media query to achieve mobile adaptation
-CSS pseudo-elements to create a hamburger menu toggle effect
 */
 
 /* ==========================pc navbar style===============================*/

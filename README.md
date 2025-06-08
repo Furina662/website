@@ -1,13 +1,45 @@
 # Kaitiakitanga Environmental Website
 
-This website is about environmental awareness and the Māori concept of Kaitiakitanga.
+## Features
 
-styles.css - 主要样式表
-about.html - 关于Kaitiakitanga页面
-action.html - 行动指南页面
-resources.html - 资源中心页面
-contact.html - 联系我们页面
-README.md - 项目说明文档
+Responsive design for all screen sizes
+Green environmental theme
+Information about New Zealand locations
+Environmental action tips
 
-端口转发：https://super-duper-funicular-v6r476vqqwx62pgjj-8000.app.github.dev/
-githubpage:https://furina662.github.io/92005-Assessment/
+## Technology
+
+HTML5
+CSS3 with flexbox
+JS
+mobile responsive design (768px breakpoint)
+
+## Project Structure
+
+**Pages:**
+index.html - Homepage with Kaitiakitanga introduction
+about.html - New Zealand locations showcase
+action.html - Encourage people to take action
+
+**CSS Styles:**
+css/index.css - Homepage styles
+css/about.css - About page styles
+css/action.css - Action page styles
+
+**Templates:**
+templates/nav.css - navbar styles
+templates/footer.css - Footer styles
+templates/reset.css - css reset stylesheet
+templates/navbar.html - navbar template
+templates/footer.html - footer template
+
+**JS:**
+js/nav.js - Navbar switching function
+
+**Images:**
+img/index-bg.jpg - Homepage background
+img/about/ - New Zealand location photos
+
+
+Github repository address:[https://github.com/Furina662/92005-Assessment]
+GitHub Pages: [https://furina662.github.io/92005-Assessment/]
