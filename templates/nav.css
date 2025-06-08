@@ -37,9 +37,9 @@ Make sure the nav content is displayed in the center of the navbar
 Kaitiakitanga website identity
 Light green text creates contrast with dark green background
 Bold font weight reinforces brand environmental theme
-Zero margin make sure precise layout control within flexbox container
+Zero margin ensure precise layout control within flexbox container
 */
-.nav-logo h1 {
+.nav-logo .logo-text {
     font-size: 35px;                 
     font-weight: bold;             
     color: #a8d5a8;               
@@ -140,7 +140,7 @@ JavaScript controlled menu system
         text-align: left;               
     }
     
-    .nav-logo h1 {
+    .nav-logo .logo-text {
         font-size: 1.5rem;              
     }
     
