@@ -10,9 +10,8 @@ Environmental action tips
 ## Technology
 
 HTML5
-CSS3 with flexbox
+CSS3
 JS
-mobile responsive design (768px breakpoint)
 
 ## Project Structure
 
