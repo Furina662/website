@@ -31,6 +31,7 @@ Make sure the nav content is displayed in the center of the navbar
     display: flex;                   
     justify-content: space-between; 
     align-items: center;              
+    user-select:none
 }
 
 /* 
