@@ -79,8 +79,9 @@ body {
 @media (max-width: 768px) {
     .main-content {
         min-height: calc(100vh - 100px); 
-        padding-top: 40px;          
-    
+        padding-top: 40px;
+           
+    }
     .container {
         margin: 0;                  
         padding: 50px 30px;          
@@ -97,4 +98,4 @@ body {
         padding: 25px;              
     }
 }
-}
+
