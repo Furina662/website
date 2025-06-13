@@ -14,8 +14,6 @@ URI : https://furina662.github.io/92005-Assessment/css/index.css
 line84		
 container is a CSS hack
 
-
-
 **original code**
 @media (max-width: 768px) {
     .main-content {
@@ -48,7 +46,7 @@ container is a CSS hack
         min-height: calc(100vh - 100px); 
         padding-top: 40px;
            
-    }
+    **}**
     .container {
         margin: 0;                  
         padding: 50px 30px;          
@@ -67,3 +65,9 @@ container is a CSS hack
 }
 
 **Reason: main-content is missing a closing bracket**
+
+
+**fixed check:**
+W3C CSS Validator results for https://furina662.github.io/92005-Assessment (CSS level 3 + SVG)
+Congratulations! No Error Found.
+This document validates as CSS level 3 + SVG !
