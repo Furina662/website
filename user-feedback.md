@@ -36,3 +36,5 @@ body{
 }
 **Problem: about.css overwrites the default font in reset.css.**
 ---------------------------------------------------------------------------
+user:ryan
+opition: I think you could use a better looking font for your website

@@ -1,7 +1,11 @@
-
 /* 
 Kaitiakitanga Environmental Website - Navbar Style Sheet
 */
+
+/* Apply Oswald to page headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', Arial, sans-serif;
+}
 
 /* ==========================pc navbar style===============================*/
 
@@ -42,9 +46,10 @@ Zero margin ensure precise layout control within flexbox container
 */
 .nav-logo .logo-text {
     font-size: 35px;                 
-    font-weight: bold;             
+    font-weight: 500;             
     color: #a8d5a8;               
-    margin: 0;                   
+    margin: 0;
+    letter-spacing: 1px;                   
 }
 
 /* 
@@ -64,10 +69,12 @@ White text on dark green background make sure  optimal visibility
 */
 .nav-menu a {
     color: white;                    
-    font-size: 25px;                
+    font-size: 25px;
+    font-weight: 400;                
     padding: 0.5rem 1rem;          
     border-radius: 5px;           
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;    
     display: block;                 
 }
 

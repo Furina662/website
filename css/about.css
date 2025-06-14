@@ -11,7 +11,6 @@ body {
     display: flex;                 
     flex-direction: column;          
     min-height: 100vh;           
-    font-family: Arial, sans-serif; 
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
                 url('../img/index-bg.jpg') center/cover no-repeat fixed; 
 }
