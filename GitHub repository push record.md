@@ -1,4 +1,45 @@
+Commits on Jun 14, 2025
+    update github commit record
+    Furina662
+    committed
+    
+    Fixed the issue that the font on the mobile terminal is not in the center
+    Furina662
+    committed
+
+Make the footer font bigger
+    Furina662
+    committed
+
+Change to a more beautiful font
+    Furina662
+    committed
+
+Fixed the problem that the font size of the navigation bar on the about page and other pages is inconsistent
+    Furina662
+    committed
+
+Commits on Jun 13, 2025
+    create w3c css check result
+    Furina662
+    committed
+
+
+Commits on Jun 11, 2025
+    Fix CSS syntax errors
+    Furina662
+    committed
+
+
 Commits on Jun 9, 2025
+    Update github commit record file
+    Furina662
+    committed
+
+    Added the ability to jump to Wikipedia by clicking on the location card on the About page
+    Furina662
+    committed
+
     Update user-feedback and fix navigation styling
     Furina662
     committed
