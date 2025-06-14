@@ -27,3 +27,12 @@ Modification results：
 
 **The above code is just an example. There are five other codes that are not listed here, but they are modified in the same way.**
 -----------------------------------------------------------------------------
+user:eric
+opition:  The navigation bar of the home and action pages is the same, but different from the about page, the text size will change when switching pages
+Modification results：
+about.css：
+body{
+    font-family: Arial, sans-serif; 
+}
+**Problem: about.css overwrites the default font in reset.css.**
+---------------------------------------------------------------------------
