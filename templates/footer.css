@@ -135,6 +135,10 @@ margin-top: auto make sure footer sticks to bottom of page
         font-size: 1.8rem;
     }
     
+        .footer-section p {
+        text-align: center;
+        margin: 0 auto;
+    }
     /* Center align underline */
     .footer-section h3::after {
         left: 50%;

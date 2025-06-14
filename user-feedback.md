@@ -92,8 +92,8 @@ reset.css:
 --------------------------------------------------------------------
 user:eric
 opition:i think your footer font is too small
-Modification results
-：
+Modification results:
+
 .footer-section h3 {
     font-size: 2.2rem;
 }
@@ -109,4 +109,13 @@ Modification results
 .footer-bottom p {
     font-size: 1.2rem;
 }
----------------------------------
+-----------------------------------------------------------
+user:eric
+opition：The footer text is not centered on mobile devices
+Modification results：
+
+.footer-section p {
+    text-align: center;
+    margin: 0 auto;
+}
+------------------------------------------------------------
