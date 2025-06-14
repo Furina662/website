@@ -63,7 +63,7 @@ margin-top: auto make sure footer sticks to bottom of page
 .footer-section p {
     color: #e8f5e8;
     line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1.4rem;
     max-width: 400px;
 }
 
@@ -76,7 +76,7 @@ margin-top: auto make sure footer sticks to bottom of page
 .footer-section ul li a {
     color: #e8f5e8;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: 5px 0;
     display: inline-block;
     transition: color 0.3s ease;
@@ -99,7 +99,7 @@ margin-top: auto make sure footer sticks to bottom of page
 /* Bottom text style */
 .footer-bottom p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #c8e6c8;
 }
 
@@ -146,34 +146,3 @@ margin-top: auto make sure footer sticks to bottom of page
     }
 }
 
-@media (max-width: 480px) {
-    .footer {
-        padding: 30px 0 10px;
-    }
-    
-    .footer-content {
-        gap: 25px;
-        padding: 0 15px;
-        margin-bottom: 25px;
-    }
-    
-    .footer-section h3 {
-        font-size: 1.6rem;
-    }
-    
-    .footer-section h4 {
-        font-size: 1.1rem;
-    }
-    
-    .footer-section p {
-        font-size: 0.95rem;
-    }
-    
-    .footer-bottom {
-        padding: 12px 15px;
-    }
-    
-    .footer-bottom p {
-        font-size: 0.85rem;
-    }
-}
